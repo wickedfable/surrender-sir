@@ -1,0 +1,348 @@
+version=12;
+class Mission
+{
+	addOns[]=
+	{
+		"a3_map_stratis",
+		"A3_Characters_F_INDEP",
+		"A3_Structures_F_Items_Vessels",
+		"A3_Structures_F_Ind_Cargo",
+		"A3_Characters_F_BLUFOR",
+		"a3_characters_f_beta",
+		"A3_Characters_F_Civil",
+		"A3_Characters_F_OPFOR"
+	};
+	addOnsAuto[]=
+	{
+		"A3_Characters_F_INDEP",
+		"A3_Characters_F_BLUFOR",
+		"a3_characters_f_beta",
+		"A3_Characters_F_Civil",
+		"A3_Characters_F_OPFOR",
+		"A3_Structures_F_Items_Vessels",
+		"A3_Structures_F_Ind_Cargo",
+		"a3_map_stratis"
+	};
+	randomSeed=15036605;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=7;
+		day=6;
+		hour=14;
+		minute=15;
+		startFogBase=0.001;
+		forecastFogBase=0.001;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+	class Groups
+	{
+		items=4;
+		class Item0
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1814.2301,5.5,5760.3721};
+					azimut=2.3673313;
+					id=0;
+					side="GUER";
+					vehicle="I_helicrew_F";
+					player="PLAYER COMMANDER";
+					leader=1;
+					skill=0.60000002;
+					init="nul=[this,1,10] execVM ""surrenderSir.sqf""; this allowDamage false;";
+				};
+			};
+		};
+		class Item1
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2162.3723,6.0183363,5595.6763};
+					azimut=-172.664;
+					id=1;
+					side="WEST";
+					vehicle="B_officer_F";
+					leader=1;
+					skill=0.60000002;
+					init="this addAction[""Call for backup"", ""callBackup.sqf"", nil, 6, True, True, """", ""(_target distance _this) < 4""]";
+				};
+			};
+		};
+		class Item2
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={1813.9204,5.5,5783.2881};
+					azimut=-172.664;
+					id=2;
+					side="CIV";
+					vehicle="C_man_1";
+					leader=1;
+					skill=0.60000002;
+				};
+				class Item1
+				{
+					position[]={1810.108,5.5,5787.1992};
+					azimut=-172.664;
+					id=3;
+					side="CIV";
+					vehicle="C_man_1";
+					skill=0.60000002;
+				};
+				class Item2
+				{
+					position[]={1815.464,5.5,5788.2036};
+					azimut=-172.664;
+					id=4;
+					side="CIV";
+					vehicle="C_man_polo_5_F";
+					skill=0.60000002;
+				};
+				class Item3
+				{
+					position[]={1811.7819,5.5,5791.5518};
+					azimut=-172.664;
+					id=5;
+					side="CIV";
+					vehicle="C_man_1_1_F";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item3
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=10;
+				class Item0
+				{
+					position[]={2276.9675,-0.13634154,6022.2461};
+					id=6;
+					side="EAST";
+					vehicle="O_Soldier_SL_F";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.46666664;
+					init="this addAction[""Surrender!"", ""surrenderSir.sqf"", nil, 6, True, True, """", ""(_target distance _this) < 10""]";
+				};
+				class Item1
+				{
+					position[]={2279.9678,0.016488079,6017.2461};
+					id=7;
+					side="EAST";
+					vehicle="O_soldier_TL_F";
+					rank="SERGEANT";
+					skill=0.46666664;
+				};
+				class Item2
+				{
+					position[]={2281.9678,0.015430325,6017.2461};
+					id=8;
+					side="EAST";
+					vehicle="O_soldier_AR_F";
+					rank="CORPORAL";
+					skill=0.33333331;
+				};
+				class Item3
+				{
+					position[]={2283.9678,0.012044854,6017.2461};
+					id=9;
+					side="EAST";
+					vehicle="O_soldier_GL_F";
+					skill=0.2;
+				};
+				class Item4
+				{
+					position[]={2285.9683,0.0071710721,6017.2461};
+					id=10;
+					side="EAST";
+					vehicle="O_soldier_LAT_F";
+					skill=0.2;
+				};
+				class Item5
+				{
+					position[]={2288.9688,-2.8841197e-005,6017.2461};
+					id=11;
+					side="EAST";
+					vehicle="O_soldier_TL_F";
+					rank="SERGEANT";
+					skill=0.46666664;
+				};
+				class Item6
+				{
+					position[]={2290.9688,-0.0026758164,6017.2461};
+					id=12;
+					side="EAST";
+					vehicle="O_soldier_AR_F";
+					rank="CORPORAL";
+					skill=0.33333331;
+				};
+				class Item7
+				{
+					position[]={2292.9688,-0.0021314174,6017.2461};
+					id=13;
+					side="EAST";
+					vehicle="O_soldier_GL_F";
+					skill=0.2;
+				};
+				class Item8
+				{
+					position[]={2294.9688,0.0024059266,6017.2461};
+					id=14;
+					side="EAST";
+					vehicle="O_soldier_F";
+					skill=0.2;
+				};
+				class Item9
+				{
+					position[]={2297.9692,0.017019615,6017.2461};
+					id=15;
+					side="EAST";
+					vehicle="O_medic_F";
+					skill=0.2;
+				};
+			};
+		};
+	};
+	class Vehicles
+	{
+		items=2;
+		class Item0
+		{
+			position[]={2159.0508,6.1452541,5579.7056};
+			id=16;
+			side="EMPTY";
+			vehicle="Land_BarrelWater_F";
+			skill=0.60000002;
+			text="ActionBarrel";
+		};
+		class Item1
+		{
+			position[]={2174.1135,6.3096108,5578.6548};
+			id=17;
+			side="EMPTY";
+			vehicle="Land_CargoBox_V1_F";
+			skill=0.60000002;
+			text="FakeBarrel";
+		};
+	};
+};
+class Intro
+{
+	addOns[]=
+	{
+		"a3_map_stratis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_stratis"
+	};
+	randomSeed=10369906;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=7;
+		day=6;
+		hour=14;
+		minute=15;
+		startFogBase=0.001;
+		forecastFogBase=0.001;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+};
+class OutroWin
+{
+	addOns[]=
+	{
+		"a3_map_stratis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_stratis"
+	};
+	randomSeed=5826357;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=7;
+		day=6;
+		hour=14;
+		minute=15;
+		startFogBase=0.001;
+		forecastFogBase=0.001;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+};
+class OutroLoose
+{
+	addOns[]=
+	{
+		"a3_map_stratis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_stratis"
+	};
+	randomSeed=5531775;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=7;
+		day=6;
+		hour=14;
+		minute=15;
+		startFogBase=0.001;
+		forecastFogBase=0.001;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+};
