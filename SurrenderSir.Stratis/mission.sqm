@@ -26,14 +26,13 @@ class Mission
 	randomSeed=15036605;
 	class Intel
 	{
-		timeOfChanges=1800.0002;
-		startWeather=0.30000001;
-		startWind=0.1;
-		startWaves=0.1;
-		forecastWeather=0.30000001;
-		forecastWind=0.1;
-		forecastWaves=0.1;
-		forecastLightnings=0.1;
+		startWeather=0.29999998;
+		startWind=0.099999994;
+		startWaves=0.099999994;
+		forecastWeather=0.29999998;
+		forecastWind=0.099999994;
+		forecastWaves=0.099999994;
+		forecastLightnings=0.099999994;
 		year=2035;
 		month=7;
 		day=6;
@@ -46,7 +45,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=4;
+		items=7;
 		class Item0
 		{
 			side="GUER";
@@ -55,15 +54,15 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={1814.2301,5.5,5760.3721};
-					azimut=2.3673313;
+					position[]={1812.3994,5.5,5766.418};
+					azimut=-58.0975;
 					id=0;
 					side="GUER";
 					vehicle="I_helicrew_F";
 					player="PLAYER COMMANDER";
 					leader=1;
 					skill=0.60000002;
-					init="nul=[this,1,10] execVM ""surrenderSir.sqf""; this allowDamage false;";
+					init="nul=[this,""EnemySurrender"",20,null] execVM ""surrenderSir.sqf""; this allowDamage false;";
 				};
 			};
 		};
@@ -139,89 +138,194 @@ class Mission
 				items=10;
 				class Item0
 				{
-					position[]={2276.9675,-0.13634154,6022.2461};
+					position[]={1807.479,5.5,5786.374};
+					azimut=-178.24699;
+					special="NONE";
 					id=6;
 					side="EAST";
 					vehicle="O_Soldier_SL_F";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.46666664;
-					init="this addAction[""Surrender!"", ""surrenderSir.sqf"", nil, 6, True, True, """", ""(_target distance _this) < 10""]";
+					init="{removeAllWeapons _x} forEach units group this;";
 				};
 				class Item1
 				{
-					position[]={2279.9678,0.016488079,6017.2461};
+					position[]={1809.1489,5.5,5782.9683};
+					azimut=-178.24699;
+					special="NONE";
 					id=7;
 					side="EAST";
-					vehicle="O_soldier_TL_F";
+					vehicle="O_Soldier_TL_F";
 					rank="SERGEANT";
 					skill=0.46666664;
 				};
 				class Item2
 				{
-					position[]={2281.9678,0.015430325,6017.2461};
+					position[]={1807.9987,5.5,5783.3857};
+					azimut=-178.24699;
+					special="NONE";
 					id=8;
 					side="EAST";
-					vehicle="O_soldier_AR_F";
+					vehicle="O_Soldier_AR_F";
 					rank="CORPORAL";
 					skill=0.33333331;
 				};
 				class Item3
 				{
-					position[]={2283.9678,0.012044854,6017.2461};
+					position[]={1805.5074,5.5,5783.2251};
+					azimut=-178.24699;
+					special="NONE";
 					id=9;
 					side="EAST";
-					vehicle="O_soldier_GL_F";
+					vehicle="O_Soldier_GL_F";
 					skill=0.2;
 				};
 				class Item4
 				{
-					position[]={2285.9683,0.0071710721,6017.2461};
+					position[]={1810.3921,5.5,5784.1353};
+					azimut=-178.24699;
+					special="NONE";
 					id=10;
 					side="EAST";
-					vehicle="O_soldier_LAT_F";
+					vehicle="O_Soldier_LAT_F";
 					skill=0.2;
 				};
 				class Item5
 				{
-					position[]={2288.9688,-2.8841197e-005,6017.2461};
+					position[]={1809.2711,5.5,5784.271};
+					azimut=-178.24699;
+					special="NONE";
 					id=11;
 					side="EAST";
-					vehicle="O_soldier_TL_F";
+					vehicle="O_Soldier_TL_F";
 					rank="SERGEANT";
 					skill=0.46666664;
 				};
 				class Item6
 				{
-					position[]={2290.9688,-0.0026758164,6017.2461};
+					position[]={1807.0052,5.5,5783.3052};
+					azimut=-178.24699;
+					special="NONE";
 					id=12;
 					side="EAST";
-					vehicle="O_soldier_AR_F";
+					vehicle="O_Soldier_AR_F";
 					rank="CORPORAL";
 					skill=0.33333331;
 				};
 				class Item7
 				{
-					position[]={2292.9688,-0.0021314174,6017.2461};
+					position[]={1804.1683,5.5,5782.8018};
+					azimut=-178.24699;
+					special="NONE";
 					id=13;
 					side="EAST";
-					vehicle="O_soldier_GL_F";
+					vehicle="O_Soldier_F";
 					skill=0.2;
 				};
 				class Item8
 				{
-					position[]={2294.9688,0.0024059266,6017.2461};
+					position[]={1805.418,5.5,5784.6377};
+					azimut=-178.24699;
+					special="NONE";
 					id=14;
 					side="EAST";
-					vehicle="O_soldier_F";
+					vehicle="O_medic_F";
 					skill=0.2;
 				};
 				class Item9
 				{
-					position[]={2297.9692,0.017019615,6017.2461};
+					position[]={1807.4198,5.5,5785.022};
+					azimut=-178.24699;
+					special="NONE";
 					id=15;
 					side="EAST";
-					vehicle="O_medic_F";
+					vehicle="O_Soldier_GL_F";
+					skill=0.2;
+				};
+			};
+		};
+		class Item4
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3197.5476,4.6693449,5811.2319};
+					azimut=2.3673301;
+					id=16;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item5
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3241.7676,4.8755946,5821.3315};
+					azimut=2.3673301;
+					id=17;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					leader=1;
+					skill=0.60000002;
+					text="opmeanie";
+				};
+			};
+		};
+		class Item6
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={1808.6945,5.5,5783.4927};
+					special="NONE";
+					id=18;
+					side="WEST";
+					vehicle="B_Soldier_TL_F";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.46666664;
+					init="{removeAllWeapons _x} forEach units group this;";
+				};
+				class Item1
+				{
+					position[]={1805.9037,5.5,5783.4502};
+					special="NONE";
+					id=19;
+					side="WEST";
+					vehicle="B_soldier_AR_F";
+					rank="CORPORAL";
+					skill=0.33333331;
+				};
+				class Item2
+				{
+					position[]={1809.842,5.5,5783.2046};
+					special="NONE";
+					id=20;
+					side="WEST";
+					vehicle="B_Soldier_GL_F";
+					skill=0.2;
+				};
+				class Item3
+				{
+					position[]={1807.499,5.5,5783.7446};
+					special="NONE";
+					id=21;
+					side="WEST";
+					vehicle="B_Soldier_F";
 					skill=0.2;
 				};
 			};
@@ -233,7 +337,7 @@ class Mission
 		class Item0
 		{
 			position[]={2159.0508,6.1452541,5579.7056};
-			id=16;
+			id=22;
 			side="EMPTY";
 			vehicle="Land_BarrelWater_F";
 			skill=0.60000002;
@@ -242,11 +346,29 @@ class Mission
 		class Item1
 		{
 			position[]={2174.1135,6.3096108,5578.6548};
-			id=17;
+			id=23;
 			side="EMPTY";
 			vehicle="Land_CargoBox_V1_F";
 			skill=0.60000002;
 			text="FakeBarrel";
+		};
+	};
+	class Sensors
+	{
+		items=1;
+		class Item0
+		{
+			position[]={3240.9146,4.8753943,5821.6426};
+			a=10;
+			b=10;
+			activationBy="MEMBER";
+			interruptable=1;
+			age="UNKNOWN";
+			idVehicle=0;
+			expActiv="weaponClass = currentWeapon player; opmeanie action [""DROPWEAPON"",opmeanie,weaponClass]; hint weaponClass;";
+			class Effects
+			{
+			};
 		};
 	};
 };
