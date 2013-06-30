@@ -2,25 +2,35 @@ _orderedUnit = _this select 0;
 _activatingPlayer = _this select 1;
 _actionId = _this select 2;
 
+if ((_activatingPlayer distance _orderedUnit) <= shoutDistTo) then 
 {
-	if ((_activatingPlayer distance _x) <= shoutDistTo) then 
+	_orderedUnit disableAI "AUTOTARGET";
+	_orderedUnit setBehaviour "SAFE";
+	sleep 0.1;
+	_orderedUnit setUnitPos "DOWN"; 
+	_orderedUnit disableAI "MOVE";
+	sleep 0.1;
+	if ((unitPos _orderedUnit) == "DOWN") then
+	{	
+		_orderedUnit removeAction _actionID;
+		_orderedUnit disableAI "ANIM";
+	};
+	sleep (random 2);
+	{
+		if (((_activatingPlayer distance _x) <= shoutDistTo) && (((side _x) == civilian))) then
 		{
-			// _unitWeapon = currentWeapon _x;
-			// _x action ["DROPWEAPON",_x,_unitWeapon]; Unit will drop weapon before surrendering if these commands are fixed to work properly.
 			_x disableAI "AUTOTARGET";
-			_x switchMove "DOWN"; 
-			sleep 1; 
-			_x disableAI "ANIM";
-			_x removeAction _actionID;
-			{
-				if (((_activatingPlayer distance _x) <= shoutDistTo) && (((side _x) == civilian))) then
-				{
-					_x disableAI "AUTOTARGET";
-					_x setUnitPos "DOWN"; 
-					sleep 1; 
-					_x disableAI "ANIM";
-					_x removeAction _actionID;
-				}
-			} forEach allUnits;
+			_x setBehaviour "SAFE";
+			sleep 0.1;
+			_x setUnitPos "DOWN";
+			_x disableAI "MOVE";	
+			sleep 0.1;
+			if ((unitPos _x) == "DOWN") then
+			{	
+				_x removeAction _actionID;
+				_x disableAI "ANIM";
+			};
+			sleep (random 2);
 		}
-} forEach units group _orderedUnit;
+	} forEach allUnits;
+}
